@@ -1,0 +1,691 @@
+/* ==========================================================================
+   GLOBAL.CSS - Estilos Globales, Variables, Utilidades, Header y Footer
+   Portafolio Web Personal (MPA) - Tema Pastel Suave & Elegante
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIABLES DE TEMA (:root) - Paleta de Colores Pasteles
+   -------------------------------------------------------------------------- */
+:root {
+  /* Fondos y Superficies Pastel */
+  --color-bg: #f9f8fc;                  /* Fondo general: lavanda porcelana suave */
+  --color-surface: #ffffff;             /* Superficie limpia para encabezado y tarjetas */
+  --color-surface-card: #ffffff;        /* Fondo de tarjetas */
+  --color-surface-hover: #f3f0fc;       /* Hover con toque lila pastel */
+  --color-border: #e8e3f5;             /* Bordes suaves en tono lavanda claro */
+  --color-border-light: #ded7f0;       /* Borde ligeramente más definido */
+
+  /* Colores de Marca y Énfasis Pastel */
+  --color-primary: #7864d4;            /* Lavanda / Lila pastel intenso con buen contraste */
+  --color-primary-hover: #6551c4;      /* Lavanda más profundo al pasar el cursor */
+  --color-primary-rgb: 120, 100, 212;
+  --color-secondary: #e07a93;          /* Rosa palo / Blush pastel */
+  --color-secondary-hover: #c96780;
+  --color-accent: #f6ad7b;             /* Melocotón / Durazno pastel cálido */
+
+  /* Tonos Pasteles Decorativos Complementarios */
+  --color-pastel-lilac: #e9dffc;
+  --color-pastel-mint: #d4f4e2;
+  --color-pastel-peach: #fde6d8;
+  --color-pastel-rose: #fcd7e0;
+  --color-pastel-sky: #d8effc;
+
+  /* Estados de retroalimentación en tonos pastel suaves */
+  --color-success: #15803d;
+  --color-success-bg: #e2f8eb;
+  --color-warning: #b45309;
+  --color-danger: #be123c;
+  --color-danger-bg: #ffe4e9;
+
+  /* Tipografía y Textos (Alto contraste para máxima legibilidad) */
+  --color-text: #2d2b45;               /* Pizarra ciruela oscuro muy legible */
+  --color-text-muted: #6b6683;         /* Gris lavanda equilibrado */
+  --color-text-dim: #9691ab;          /* Texto sutil o pie de página */
+  --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Fira Code", Consolas, Monaco, "Courier New", monospace;
+
+  /* Espaciados y Radios redondeados suaves */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Sombras etéreas y suaves (Diseño pastel moderno) */
+  --shadow-sm: 0 2px 8px rgba(120, 100, 212, 0.06);
+  --shadow-md: 0 8px 24px rgba(120, 100, 212, 0.09);
+  --shadow-lg: 0 16px 36px rgba(120, 100, 212, 0.12);
+  --shadow-glow: 0 10px 30px rgba(196, 181, 253, 0.45);
+
+  /* Transiciones y Dimensiones */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --header-height: 72px;
+  --max-width: 1200px;
+}
+
+/* --------------------------------------------------------------------------
+   2. RESET UNIVERSAL Y ESTILOS BASE
+   -------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Enlaces y elementos generales */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   3. CLASES UTILITARIAS REUTILIZABLES
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* Encabezados de sección estándar */
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-primary);
+  background-color: var(--color-pastel-lilac);
+  padding: 0.35rem 0.95rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(120, 100, 212, 0.2);
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+.section-subtitle {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Botones estándar con estética pastel */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary), #8f7fe0);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(120, 100, 212, 0.28);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--color-primary-hover), #7e6bd3);
+  box-shadow: 0 6px 20px rgba(120, 100, 212, 0.38);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: #ffffff;
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background-color: var(--color-surface-hover);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: var(--color-pastel-lilac);
+  color: var(--color-primary);
+  border: 1px solid rgba(120, 100, 212, 0.15);
+}
+
+.btn-secondary:hover {
+  background-color: #dfd3f8;
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.85rem;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* Insignias / Badges Pastel */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  background-color: var(--color-pastel-lilac);
+  color: var(--color-primary);
+  border: 1px solid rgba(120, 100, 212, 0.18);
+  letter-spacing: 0.02em;
+}
+
+/* --------------------------------------------------------------------------
+   4. ENCABEZADO Y BARRA DE NAVEGACIÓN (.site-header, .navbar)
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: rgba(249, 248, 252, 0.9);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 1000;
+  transition: background-color var(--transition-fast);
+}
+
+.navbar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logotipo con Efecto Burbuja Pastel */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.015em;
+  text-decoration: none;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.logo-bubble {
+  padding: 0.42rem 1.15rem;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, rgba(233, 223, 252, 0.75) 0%, rgba(253, 208, 220, 0.65) 50%, rgba(216, 239, 252, 0.75) 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.95),
+    inset 0 -3px 6px rgba(120, 100, 212, 0.15),
+    0 4px 15px rgba(120, 100, 212, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: bubbleFloat 3.5s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.logo-bubble:hover {
+  transform: scale(1.06) translateY(-2px);
+  background: linear-gradient(135deg, rgba(233, 223, 252, 0.95) 0%, rgba(253, 208, 220, 0.85) 50%, rgba(216, 239, 252, 0.95) 100%);
+  box-shadow: 
+    inset 0 2px 6px rgba(255, 255, 255, 1),
+    inset 0 -4px 8px rgba(120, 100, 212, 0.22),
+    0 8px 24px rgba(120, 100, 212, 0.22);
+}
+
+.logo-bubble:active {
+  transform: scale(0.97) translateY(1px);
+}
+
+.logo-bubble .bubble-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(120, 100, 212, 0.25));
+  animation: bubbleWobble 3s ease-in-out infinite;
+}
+
+.logo-bubble .logo-text {
+  background: linear-gradient(135deg, #7864d4 0%, #c026d3 50%, #e07a93 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+/* Animaciones de Efecto Burbuja */
+@keyframes bubbleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes bubbleWobble {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-4deg) scale(1.05);
+  }
+  75% {
+    transform: rotate(4deg) scale(0.97);
+  }
+}
+
+.logo-accent {
+  color: var(--color-primary);
+}
+
+/* Menú de navegación en escritorio */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 0.5rem 0.95rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+  background-color: var(--color-surface-hover);
+}
+
+/* Enlace activo de la página actual */
+.nav-link.active {
+  color: var(--color-primary);
+  background-color: var(--color-pastel-lilac);
+  font-weight: 700;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+/* Botón Hamburguesa Móvil */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  z-index: 1001;
+}
+
+.menu-toggle .bar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: 2px;
+  transition: all var(--transition-normal);
+}
+
+/* Animación a 'X' del botón cuando está activo */
+.menu-toggle.active .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* --------------------------------------------------------------------------
+   5. PIE DE PÁGINA (.site-footer)
+   -------------------------------------------------------------------------- */
+.site-footer {
+  margin-top: auto;
+  background-color: #f2eef9;
+  border-top: 1px solid var(--color-border);
+  padding: 3.5rem 0 2rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.footer-brand {
+  max-width: 480px;
+}
+
+.footer-brand .logo {
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.footer-desc {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.footer-link {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--color-primary);
+}
+
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border);
+  margin: 1rem 0 0.5rem;
+}
+
+.footer-bottom {
+  font-size: 0.85rem;
+  color: var(--color-text-dim);
+}
+
+/* --------------------------------------------------------------------------
+   6. RESPONSIVIDAD: MENÚ HORIZONTAL Y TEXTOS ADAPTADOS (Dispositivos Móviles)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  /* Contenedores y espaciados móviles */
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .section {
+    padding-top: 3.25rem;
+    padding-bottom: 3.25rem;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .section-tag {
+    font-size: 0.78rem;
+    padding: 0.25rem 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .btn {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  /* Ocultar botón hamburguesa para dar paso al menú horizontal superior */
+  .menu-toggle {
+    display: none !important;
+  }
+
+  /* Cabecera adaptada con menú horizontal en la parte superior */
+  .site-header {
+    height: auto;
+    min-height: auto;
+    padding: 0.5rem 0 0.4rem;
+    position: sticky;
+    top: 0;
+    background-color: rgba(249, 248, 252, 0.96);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  .navbar {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .logo {
+    font-size: 1.05rem;
+    gap: 0.35rem;
+  }
+
+  .logo-bubble {
+    padding: 0.32rem 0.95rem;
+  }
+
+  /* Menú desplegado horizontalmente en la parte superior */
+  .nav-menu {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.2rem 0.25rem;
+    gap: 0.35rem;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .nav-menu::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
+
+  .nav-item {
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .nav-link {
+    width: auto;
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+    border-radius: var(--radius-full);
+    border: 1px solid transparent;
+    color: var(--color-text-muted);
+  }
+
+  .nav-link:hover {
+    color: var(--color-primary);
+    background-color: var(--color-surface-hover);
+  }
+
+  .nav-link.active {
+    color: var(--color-primary);
+    background-color: var(--color-pastel-lilac);
+    border: 1px solid rgba(120, 100, 212, 0.25);
+    border-bottom: 1px solid rgba(120, 100, 212, 0.25);
+    border-left: 1px solid rgba(120, 100, 212, 0.25);
+  }
+
+  /* Pie de página en móvil */
+  .site-footer {
+    padding: 2.5rem 0 1.5rem;
+  }
+
+  .footer-content {
+    gap: 1.25rem;
+  }
+
+  .footer-desc {
+    font-size: 0.85rem;
+  }
+
+  .footer-links {
+    gap: 0.9rem;
+  }
+
+  .footer-link {
+    font-size: 0.85rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+}
+
+/* Pantallas pequeñas y smartphones estrechos (menores a 480px) */
+@media (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .section {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.88rem;
+  }
+
+  .logo {
+    font-size: 0.95rem;
+  }
+
+  .logo-bubble {
+    padding: 0.28rem 0.8rem;
+  }
+
+  .nav-menu {
+    gap: 0.2rem;
+    justify-content: flex-start;
+  }
+
+  .nav-link {
+    padding: 0.3rem 0.55rem;
+    font-size: 0.78rem;
+  }
+}

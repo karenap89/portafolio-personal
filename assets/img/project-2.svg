@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pastel-bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdfcfd" />
+      <stop offset="100%" stop-color="#edf6fd" />
+    </linearGradient>
+    <linearGradient id="banner-pastel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bbf7d0" />
+      <stop offset="100%" stop-color="#bae6fd" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="600" height="380" rx="16" fill="url(#pastel-bg2)" stroke="#e2e8f0" stroke-width="2" />
+  
+  <!-- Ventana de navegador -->
+  <rect x="20" y="20" width="560" height="36" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" />
+  <circle cx="45" cy="38" r="6" fill="#fbcfe8" />
+  <circle cx="65" cy="38" r="6" fill="#fde68a" />
+  <circle cx="85" cy="38" r="6" fill="#bbf7d0" />
+  <rect x="115" y="30" width="260" height="16" rx="4" fill="#f1f5f9" />
+  
+  <!-- Cabecera de reporte -->
+  <rect x="30" y="70" width="540" height="40" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+  <rect x="50" y="82" width="90" height="16" rx="4" fill="#6ec5b8" />
+  <rect x="420" y="82" width="60" height="16" rx="4" fill="#e2e8f0" />
+  <rect x="495" y="82" width="60" height="16" rx="4" fill="#9d8df1" />
+
+  <!-- Banner Hero del Reporte -->
+  <rect x="30" y="122" width="540" height="85" rx="10" fill="url(#banner-pastel)" />
+  <text x="50" y="155" fill="#1e293b" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">Informes Corporativos Jaspersoft & Oracle</text>
+  <text x="50" y="180" fill="#475569" font-family="system-ui, sans-serif" font-size="12">Generación y distribución automatizada de reportes gerenciales</text>
+
+  <!-- Tarjetas de datos pastel -->
+  <g transform="translate(30, 220)">
+    <!-- Tarjeta 1 -->
+    <rect x="0" y="0" width="168" height="140" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" />
+    <rect x="15" y="15" width="138" height="60" rx="6" fill="#f8fafc" />
+    <rect x="25" y="28" width="118" height="10" rx="3" fill="#cbd5e1" />
+    <rect x="25" y="46" width="70" height="8" rx="3" fill="#e2e8f0" />
+    <rect x="15" y="90" width="95" height="10" rx="3" fill="#334155" />
+    <rect x="15" y="108" width="50" height="14" rx="4" fill="#bbf7d0" />
+    <circle cx="140" cy="115" r="10" fill="#bae6fd" />
+    
+    <!-- Tarjeta 2 -->
+    <rect x="186" y="0" width="168" height="140" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" />
+    <rect x="201" y="15" width="138" height="60" rx="6" fill="#f8fafc" />
+    <rect x="211" y="28" width="118" height="10" rx="3" fill="#cbd5e1" />
+    <rect x="211" y="46" width="70" height="8" rx="3" fill="#e2e8f0" />
+    <rect x="201" y="90" width="100" height="10" rx="3" fill="#334155" />
+    <rect x="201" y="108" width="50" height="14" rx="4" fill="#fbcfe8" />
+    <circle cx="326" cy="115" r="10" fill="#d8cefa" />
+    
+    <!-- Tarjeta 3 -->
+    <rect x="372" y="0" width="168" height="140" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" />
+    <rect x="387" y="15" width="138" height="60" rx="6" fill="#f8fafc" />
+    <rect x="397" y="28" width="118" height="10" rx="3" fill="#cbd5e1" />
+    <rect x="397" y="46" width="70" height="8" rx="3" fill="#e2e8f0" />
+    <rect x="387" y="90" width="90" height="10" rx="3" fill="#334155" />
+    <rect x="387" y="108" width="50" height="14" rx="4" fill="#fed7aa" />
+    <circle cx="512" cy="115" r="10" fill="#6ec5b8" />
+  </g>
+</svg>

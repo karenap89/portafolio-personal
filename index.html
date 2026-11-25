@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portafolio profesional de Karen Andrea Ponce Aguirre - Ingeniera en Ciencias Computacionales especializada en desarrollo de software, bases de datos PL/SQL y automatización de procesos BPM.">
+    <title>Inicio | Karen Andrea Ponce Aguirre - Ingeniera en Ciencias Computacionales</title>
+
+    <!-- Enlace a hojas de estilo nativas -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+
+    <!-- ========================================================================
+       ENCABEZADO Y NAVEGACIÓN COMPARTIDA (Idéntico en las 5 páginas)
+       ======================================================================== -->
+    <header class="site-header">
+        <nav class="navbar container">
+            <!-- Logotipo con Efecto Burbuja y Maletín -->
+            <a href="index.html" class="logo logo-bubble">
+                <span class="bubble-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                        <defs>
+                            <linearGradient id="briefcaseGradH1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#7864d4" />
+                                <stop offset="100%" stop-color="#e07a93" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M9 6V4.5C9 3.67 9.67 3 10.5 3h3c.83 0 1.5.67 1.5 1.5V6" stroke="url(#briefcaseGradH1)"
+                            stroke-width="2" stroke-linecap="round" />
+                        <rect x="3" y="6" width="18" height="15" rx="3" fill="url(#briefcaseGradH1)" />
+                        <path d="M3 11.5h7.5m3 0H21" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"
+                            opacity="0.8" />
+                        <rect x="10.5" y="10" width="3" height="3" rx="0.8" fill="#ffffff" />
+                    </svg>
+                </span>
+                <span class="logo-text">Mi Portafolio</span>
+            </a>
+
+            <!-- Botón de Menú Móvil (Hamburguesa) -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Lista de Enlaces de Navegación -->
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">Sobre mí</a></li>
+                <li class="nav-item"><a href="skills.html" class="nav-link">Habilidades</a></li>
+                <!-- Se oculta temporalmente hasta contar con proyectos listos para publicar:
+                <li class="nav-item"><a href="projects.html" class="nav-link">Proyectos</a></li>
+                -->
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========================================================================
+       CONTENIDO PRINCIPAL (<main>) - Página 1: Inicio
+       ======================================================================== -->
+    <main>
+        <!-- Sección Hero de Presentación -->
+        <section class="hero container">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <!--
+                    <span class="hero-greeting">¡Hola! Bienvenido a mi portafolio profesional</span>
+                    -->
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Karen Andrea Ponce Aguirre</span>
+                    </h1>
+                    <p class="hero-role">Ingeniera en Ciencias Computacionales</p>
+                    <p class="hero-description">
+                        Profesional polifuncional graduada de la ESPOL, con capacidad y responsabilidad para cumplir
+                        funciones bajo presión, alto nivel de colaboración y excelente manejo de relaciones
+                        interpersonales. Especializada en desarrollo de software, optimización de bases de datos PL/SQL
+                        y automatización de procesos BPM.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="about.html" class="btn btn-primary">Conóceme más</a>
+                        <a href="contact.html" class="btn btn-outline">Contáctame</a>
+                        <!-- Botón a proyectos oculto temporalmente:
+                        <a href="projects.html" class="btn btn-primary">Ver proyectos</a>
+                        -->
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-avatar-wrapper">
+                        <img src="assets/img/yo.jpeg" alt="Foto de perfil de Karen Andrea Ponce Aguirre"
+                            class="hero-avatar-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Fortalezas y Resumen -->
+        <section class="section highlights-section container">
+            <div class="section-header">
+                <span class="section-tag">Mis Pilares</span>
+                <h2 class="section-title">¿Qué aporto a cada proyecto y organización?</h2>
+                <p class="section-subtitle">
+                    Sólidos conocimientos en ingeniería computacional, análisis de sistemas, bases de datos relacionales
+                    y optimización de procesos.
+                </p>
+            </div>
+
+            <div class="highlights-grid">
+                <!-- Tarjeta 1 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">🗄️</div>
+                    <h3 class="highlight-title">Bases de Datos & PL/SQL</h3>
+                    <p class="highlight-desc">
+                        Instalación, administración de objetos, reducción de tiempos de respuesta en procesos PL/SQL,
+                        gestión de roles y respaldos en Oracle 11G R2 y MySQL.
+                    </p>
+                </article>
+
+                <!-- Tarjeta 2 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">⚙️</div>
+                    <h3 class="highlight-title">Automatización y Procesos BPM</h3>
+                    <p class="highlight-desc">
+                        Levantamiento de requerimientos, diagramación y automatización de módulos de procesos
+                        administrativos y financieros para elevar la eficiencia operativa.
+                    </p>
+                </article>
+
+                <!-- Tarjeta 3 -->
+                <article class="highlight-card">
+                    <div class="highlight-icon">📊</div>
+                    <h3 class="highlight-title">Desarrollo de Software & Reportes</h3>
+                    <p class="highlight-desc">
+                        Diseño de soluciones con JavaScript ES6, NetBeans, informes estructurados con Jaspersoft iReport
+                        5.6 y Oracle Reports 6i, junto a soporte y capacitación a usuarios.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================================================================
+       PIE DE PÁGINA COMPARTIDO (Idéntico en las 5 páginas)
+       ======================================================================== -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <!--  <a href="index.html" class="logo logo-bubble">
+                    <span class="bubble-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                            <defs>
+                                <linearGradient id="briefcaseGradF1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#7864d4" />
+                                    <stop offset="100%" stop-color="#e07a93" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M9 6V4.5C9 3.67 9.67 3 10.5 3h3c.83 0 1.5.67 1.5 1.5V6" stroke="url(#briefcaseGradF1)" stroke-width="2" stroke-linecap="round" />
+                            <rect x="3" y="6" width="18" height="15" rx="3" fill="url(#briefcaseGradF1)" />
+                            <path d="M3 11.5h7.5m3 0H21" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.8" />
+                            <rect x="10.5" y="10" width="3" height="3" rx="0.8" fill="#ffffff" />
+                        </svg>
+                    </span>
+                    <span class="logo-text">Mi Portafolio</span>
+                </a>-->
+                <p class="footer-desc">Portafolio profesional de Karen Andrea Ponce Aguirre - Ingeniera en Ciencias
+                    Computacionales (ESPOL).</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html" class="footer-link">Inicio</a>
+                <a href="about.html" class="footer-link">Sobre mí</a>
+                <a href="skills.html" class="footer-link">Habilidades</a>
+                <!-- <a href="projects.html" class="footer-link">Proyectos</a> -->
+                <a href="contact.html" class="footer-link">Contacto</a>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-bottom">
+                &copy; <span id="current-year"></span> Karen Andrea Ponce Aguirre. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Script global para menú móvil, enlace activo y año dinámico -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
